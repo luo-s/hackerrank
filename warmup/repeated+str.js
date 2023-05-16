@@ -15,10 +15,10 @@ function repeatedString(s, n) {
   for (let letter of s) {
     if (letter === "a") countFull++;
   }
-  let overflow = n % s;
+  let overflow = n % s.length;
   let count = 0;
   for (let i = 0; i < overflow; i++) {
     if (s[i] === "a") count++;
   }
-  return count + Math.floor(n / s) * countFull;
+  return count + Math.floor(n / s.length) * countFull;
 }
